@@ -16,17 +16,16 @@ Key Features:
 
 Getting Started:
 
-📥 Download the latest release [here](https://github.com/dogukan-sys/CuPos/releases).
-
+📥 Download the latest release [here](https://github.com/dogukan-sys/CuPos/releases).  
 🖱️ Run the application, and save, copy, and manage your mouse coordinates effortlessly!
 
 Executable Details:
 
-🐍 Python-based: CuPos is written in Python.
+🐍 Python-based: CuPos is written in Python.  
 🚀 Executable: Users can either grab the Python files or opt for the bundled executable created with PyInstaller for easy deployment.
 
-🎉 v1.0.0 (First Release):
-Initial release with basic mouse coordinate tracking functionality.
-Save, copy, and delete mouse positions with ease.
-Copy all functionality for streamlined coordination management.
+🎉 v1.0.0 (First Release):  
+Initial release with basic mouse coordinate tracking functionality.  
+Save, copy, and delete mouse positions with ease  
+Copy all functionality for streamlined coordination management  
 Option to display RGB values at specified positions.
