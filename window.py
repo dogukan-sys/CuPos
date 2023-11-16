@@ -3,6 +3,7 @@ import keyboard
 from tkinter import ttk
 from mouse_info import get_mouse_info
 from mouse_info import position_log
+import pyautogui
 
 
 # Functions
@@ -42,6 +43,12 @@ def delete_text(text_widget):
 
 def get_mouse_info_wrapper():
     get_mouse_info(color_var.get())
+
+
+def update_label():
+    x, y = pyautogui.position()
+    coord_label.config(text=f"x: {x} | y: {y}")
+    window.after(100, update_label)  # call update_label again after 100 ms
 
 
 keyboard.add_hotkey("ctrl + shift + z", get_mouse_info_wrapper)
@@ -84,4 +91,5 @@ button_frame.pack(pady=(10, 10))
 log_box = tk.Frame(window)
 log_box.pack(fill=tk.BOTH, expand=True, pady=(10, 10))
 
+update_label()  # start the label update loop
 window.mainloop()
