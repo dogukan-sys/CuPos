@@ -16,7 +16,8 @@ Key Features:
 
 Getting Started:
 
-📥 Download the latest release here. \n
+📥 Download the latest release [here](https://github.com/dogukan-sys/CuPos/releases).
+
 🖱️ Run the application, and save, copy, and manage your mouse coordinates effortlessly!
 
 Executable Details:
