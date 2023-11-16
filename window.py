@@ -13,16 +13,39 @@ def update_logbox():
         widget.destroy()
 
     for item in position_log:
-        text = tk.Text(log_box, height=1, width=30, state="normal")
-        text.insert("1.0", str(item))
+        text = tk.Text(
+            log_box,
+            height=1,
+            width=30,
+            state="normal",
+            bg="#f0f0f0",
+            font=("Google Sans", 14),
+            borderwidth=0,
+            highlightthickness=0,
+        )
+        text.tag_configure("center", justify="center")
+        text.insert("1.0", str(item), "center")
         text.configure(state="disabled")
-        text.pack()
+        text.pack(pady=2)
 
         # Bind left-click event
         text.bind("<Button-1>", lambda event, text=text: copy_to_clipboard(text))
 
         # Bind right-click event
         text.bind("<Button-3>", lambda event, text=text: delete_text(text))
+
+        # Bind Hover Cursor
+        text.bind("<Enter>", on_enter)
+        text.bind("<Leave>", on_leave)
+
+
+# Change cursor on Hover
+def on_enter(event):
+    event.widget.config(cursor="hand2")
+
+
+def on_leave(event):
+    event.widget.config(cursor="")
 
 
 def copy_all():
@@ -69,6 +92,7 @@ style = ttk.Style()
 style.configure("TLabel", font=("Google Sans", 12))
 style.configure("TButton", font=("Google Sans", 9))
 style.configure("TCheckbutton", font=("Google Sans", 9))
+style.configure("TText", background="gray", relief="flat")
 
 
 head_label = ttk.Label(window, text="CuPos")
