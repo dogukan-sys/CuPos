@@ -16,7 +16,7 @@ Key Features:
 
 Getting Started:
 
-📥 Download the latest release here. /n
+📥 Download the latest release here. \n
 🖱️ Run the application, and save, copy, and manage your mouse coordinates effortlessly!
 
 Executable Details:
