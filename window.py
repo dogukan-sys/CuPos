@@ -57,8 +57,9 @@ keyboard.add_hotkey("ctrl + shift + z", update_logbox)
 
 # Window
 window = tk.Tk()
-window.geometry("280x320")
-window.minsize(250, 320)
+window.attributes("-topmost", True)
+window.geometry("250x300")
+window.minsize(250, 300)
 window.title("Cupos")
 
 # Create a style object
